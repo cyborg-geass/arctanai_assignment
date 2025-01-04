@@ -17,6 +17,7 @@ CHANNELS = 1  # Mono audio for single microphone need to change for multi-microp
 RATE = 16000  # Sampling rate in Hz it needs to be resampled in real time
 LATENCY = 0.1  # Target latency in seconds (100 milisconds)
 OUTPUT_FILE = "output_real_time.wav"
+HUGGINGFACE_TOKEN = "" # Input your huggingface token
 
 # Initialize the DeepFilterNet model
 model, df_state, _ = init_df()
@@ -24,7 +25,7 @@ model, df_state, _ = init_df()
 # Initialize Pyannote audio pipeline for speaker diarization
 pipeline = Pipeline.from_pretrained(
     "pyannote/speaker-diarization-3.1",
-    use_auth_token="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"
+    use_auth_token=HUGGINGFACE_TOKEN
 ).to(torch.device("cpu")) # use cuda for better & faster results
 
 # def single_speaker_scenario():
