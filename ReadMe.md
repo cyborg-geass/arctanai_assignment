@@ -15,12 +15,14 @@ python -m venv audenv
 ```bash
 pip install -r requirements.txt
 ```
-3. Now we can just start the system by:
+3. Please use your own Huggingface Token in main.py or ipynb file to access speaker diarization model of pyannote.
+
+4. Now we can just start the system by:
 ```bash
 python main.py
 ```
 And it will ask how many speaker mode you want: single or multi.
 
-4. Alternatively we can run the cells of AudioDenoiser.ipynb one by one.
+5. Alternatively we can run the cells of AudioDenoiser.ipynb one by one.
 
-5. Limitations: It is not tested on the overlapping voices that much so some cases it will not provide expected results.
+6. Limitations: It is not tested on the overlapping voices that much so some cases it will not provide expected results.
